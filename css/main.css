@@ -1,0 +1,97 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   width: 100%;
+   overflow-x: hidden;
+}
+
+img {
+   width: 100%;
+}
+
+/* --------------------------===>Анимация перехода страницы<===-------------------------- */
+.preloader {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #3B3B3B;
+   transition: all .09s ease-out;
+   z-index: 1000;
+}
+
+.preloader--hide {
+   opacity: 0;
+   visibility: hidden;
+   z-index: -1;
+}
+
+.preloader__loader,
+.preloader__percents {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.preloader__percents {
+   font-family: Arial, sans-serif;
+   font-size: 24px;
+   font-weight: bold;
+}
+
+@keyframes ldio-7b9jp44ngu2 {
+   0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+   }
+
+   100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+   }
+}
+
+.ldio-7b9jp44ngu2 div {
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   border: 10px solid #50f4ad;
+   border-top-color: transparent;
+   border-radius: 50%;
+}
+
+.ldio-7b9jp44ngu2 div {
+   animation: ldio-7b9jp44ngu2 1s linear infinite;
+   top: 100px;
+   left: 100px
+}
+
+.loadingio-spinner-rolling-wfj10wkiga7 {
+   width: 200px;
+   height: 200px;
+   display: inline-block;
+   overflow: hidden;
+   background: #ffffff00;
+}
+
+.ldio-7b9jp44ngu2 {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   transform: translateZ(0) scale(1);
+   backface-visibility: hidden;
+   transform-origin: 0 0;
+}
+
+.ldio-7b9jp44ngu2 div {
+   box-sizing: content-box;
+}
+
+.out-num {
+   font-family: Arial, sans-serif;
+   font-size: 24px;
+   font-weight: bold;
+}
