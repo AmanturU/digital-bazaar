@@ -21,11 +21,16 @@
 body {
    width: 100%;
    overflow-x: hidden;
-   background-color: var(--backround);
+   font-family: var(--ff-workSans);
+   color: var(--text);
 }
 
 img {
-   width: 100%;
+   max-width: 100%;
+}
+
+a {
+   text-decoration: none;
 }
 
 iframe {
