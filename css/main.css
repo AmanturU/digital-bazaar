@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+   --ff-spaceMono: 'Space Mono';
+   --ff-workSans: 'Work Sans';
+   --backround: #2B2B2B;
+   --backround-secondary: #3B3B3B;
+   --text: #858584;
+   --text-secondary: #FFFFFF;
+   --text-in-action: #A259FF;
+   --text-blue-accent: #377DF7;
+   --text-red-accent: #FF7262;
+   --transparent-background: #ffffff00;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -6,10 +21,19 @@
 body {
    width: 100%;
    overflow-x: hidden;
+   background-color: var(--backround);
 }
 
 img {
    width: 100%;
+}
+
+iframe {
+   border: none;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   overflow-y: hidden;
 }
 
 /* --------------------------===>Анимация перехода страницы<===-------------------------- */
