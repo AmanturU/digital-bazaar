@@ -43,3 +43,4 @@ function outNum(num, elem, options) {
       }
    }, t)
 }
+

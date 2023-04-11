@@ -1,1 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+   --ff-spaceMono: 'Space Mono';
+   --ff-workSans: 'Work Sans';
+   --backround: #2B2B2B;
+   --backround-secondary: #3B3B3B;
+   --text: #858584;
+   --text-secondary: #FFFFFF;
+   --text-in-action: #A259FF;
+   --text-blue-accent: #377DF7;
+   --text-red-accent: #FF7262;
+   --transparent-background: #ffffff00;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   width: 100%;
+   overflow-x: hidden;
+   font-family: var(--ff-workSans);
+   color: var(--text);
+   background: var(--backround);
+}
+
+img {
+   width: 100%;
+}
+
+a {
+   text-decoration: none;
+}
+
+
+/* --------------------------===>Create account block :)<===-------------------------- */
+.create-account {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.left-side {
+   width: 53%;
+}
+
+.left-side img {
+   width: 100%;
+}
+
+.right-side {
+   width: 47%;
+   flex-direction: column;
+   align-items: flex-start;
+   text-align: left;
+   margin: 50px 70px;
+}
+
+.right-side-title {
+   width: 460px;
+}
+
+.right-side h1 {
+   color: var(--text-secondary);
+   font-style: normal;
+   font-weight: 600;
+   font-size: 51px;
+   line-height: 110%;
+   margin-bottom: 20px;
+}
+
+.right-side p {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 22px;
+   line-height: 160%;
+
+   text-transform: capitalize;
+   margin-bottom: 30px;
+}
+
+.form-group {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+   margin-left: 10px;
+}
+
+.form-group input {
+
+   align-items: center;
+   padding: 16px 20px;
+   width: 330px;
+   height: 16px;
+   background: #FFFFFF;
+   border: 1px solid #858584;
+   border-radius: 20px;
+}
+
+.form-group img {
+   margin-right: -30px;
+}
+
+.form-img {
+   width: 20px;
+   height: 20px;
+}
+
+.buttonCreate {
+   justify-content: center;
+   align-items: center;
+
+   width: 370px;
+   height: 46px;
+
+   background: #A259FF;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.buttonCreate:hover {
+   transition: all 0.1s ease;
+   background-color: var(--transparent-background);
+   border: 2px solid var(--text-in-action);
+   cursor: pointer;
+}
