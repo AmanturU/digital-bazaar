@@ -108,7 +108,7 @@ a {
    height: 20px;
 }
 
-.buttonCreate {
+.submitBtn {
    justify-content: center;
    align-items: center;
 
@@ -122,9 +122,25 @@ a {
    transition: all 0.3s ease;
 }
 
-.buttonCreate:hover {
+.submitBtn:hover {
    transition: all 0.1s ease;
    background-color: var(--transparent-background);
    border: 2px solid var(--text-in-action);
    cursor: pointer;
+}
+
+.auth-info {
+   font-size: 14px;
+   margin: 20px 0;
+   text-align: center;
+}
+
+.auth-link {
+   color: #0077c0;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.auth-link:hover {
+   text-decoration: underline;
 }

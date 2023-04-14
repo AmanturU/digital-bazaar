@@ -44,3 +44,10 @@ function outNum(num, elem, options) {
    }, t)
 }
 
+
+
+// $signOutBtn.addEventListener('click', () => {
+//    alert('Всё робит')
+//    localStorage.removeItem('localId')
+//    window.open('../html/signIn.html', '_self')
+// })
