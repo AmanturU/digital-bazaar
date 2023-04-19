@@ -44,3 +44,11 @@ function outNum(num, elem, options) {
    }, t)
 }
 
+// // ----Проверка на авторизованность
+
+
+// $signOutBtn.addEventListener('click', () => {
+//    alert('Всё робит')
+//    localStorage.removeItem('localId')
+//    window.open('../html/signIn.html', '_self')
+// })
