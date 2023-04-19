@@ -39,25 +39,29 @@
             <img src="/img/image-placeholder.png" alt="Left side image">
          </div>
          <div class="right-side">
-            <div class="right-side-title">
-               <h1>Login</h1>
-               <p>Welcome back! Enter your details to access your account.</p>
+            <div class="ride-side-content">
+               <div class="right-side-title">
+                  <h1>Login</h1>
+                  <p>Welcome back! Enter your details to access your account.</p>
+               </div>
+               <form id="signIn_formAccRegister">
+                  <div class="form-group">
+                     <img src="/img/icons/User-icon.png" alt="Username icon" class="form-img">
+                     <input type="text" name="username" placeholder="Username or email" class="signIn_emailInput"
+                        required>
+                  </div>
+                  <div class="form-group">
+                     <img src="/img/icons/LockKey.png" alt="Password icon" class="form-img">
+                     <input type="password" name="password" placeholder="Password" class="signIn_passwordInput"
+                        required>
+                  </div>
+                  <button class="submitBtn" id="signIn_loginButton">Login</button>
+                  <p class="auth-info">
+                     <span>Don't have an account?</span>
+                     <a href="/createAccount.html" class="auth-link">Sign up</a>
+                  </p>
+               </form>
             </div>
-            <form id="signIn_formAccRegister">
-               <div class="form-group">
-                  <img src="/img/icons/User-icon.png" alt="Username icon" class="form-img">
-                  <input type="text" name="username" placeholder="Username or email" class="signIn_emailInput" required>
-               </div>
-               <div class="form-group">
-                  <img src="/img/icons/LockKey.png" alt="Password icon" class="form-img">
-                  <input type="password" name="password" placeholder="Password" class="signIn_passwordInput" required>
-               </div>
-               <button class="submitBtn" id="signIn_loginButton">Login</button>
-               <p class="auth-info">
-                  Don't have an account?
-                  <a href="../html/signUp.html" class="auth-link">Sign up</a>
-               </p>
-            </form>
          </div>
       </section>
 

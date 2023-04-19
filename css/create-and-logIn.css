@@ -58,7 +58,7 @@ a {
    margin: 50px 70px;
 }
 
-.right-side-title {
+.ride-side-content .right-side-title {
    width: 460px;
 }
 
@@ -79,6 +79,10 @@ a {
 
    text-transform: capitalize;
    margin-bottom: 30px;
+}
+
+.right-side-title p {
+   width: 580px;
 }
 
 .form-group {
@@ -130,12 +134,18 @@ a {
 }
 
 .auth-info {
-   font-size: 14px;
+   /* font-size: 50px; */
    margin: 20px 0;
-   text-align: center;
+   text-align: left;
 }
 
+.auth-info span {
+   font-size: 16px;
+}
+
+
 .auth-link {
+   font-size: 16px;
    color: #0077c0;
    text-decoration: none;
    font-weight: bold;

@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyBP63xmWHVgulhy_myC2lXnJtdPXlTJvNc'
+const API_KEY = 'AIzaSyBOMG-k0X65yHLtDcl2E8rYzj6oCZKAhug'
 const SIGN_UP_URL = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`
 
 // const $usernameInput = document.querySelector('.signUp-username-Input')

@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyBP63xmWHVgulhy_myC2lXnJtdPXlTJvNc'
+const API_KEY = 'AIzaSyBOMG-k0X65yHLtDcl2E8rYzj6oCZKAhug'
 const SIGN_IN_URL = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`
 
 const $signIn_emailInput = document.querySelector('.signIn_emailInput')
@@ -9,11 +9,7 @@ const $signIn_formAccRegister = document.querySelector('#signIn_formAccRegister'
 
 
 window.addEventListener('DOMContentLoaded', () => {
-   const localId = localStorage.getItem('localId')
-
-   if (localId) {
-      window.open('/homePage.html', '_self')
-   }
+   redirectIfLoggedIn()
 })
 
 async function sighIn(email, password) {
@@ -58,3 +54,11 @@ $signIn_formAccRegister.addEventListener('submit', (event) => {
 
    }
 })
+
+/* --------------------------===>Проверка на прохождения регистрации<===-------------------------- */
+function redirectIfLoggedIn() {
+   const localId = localStorage.getItem('localId')
+   if (localId) {
+      window.open('/homePage.html', '_self')
+   }
+}

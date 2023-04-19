@@ -44,6 +44,7 @@ function outNum(num, elem, options) {
    }, t)
 }
 
+// // ----Проверка на авторизованность
 
 
 // $signOutBtn.addEventListener('click', () => {
