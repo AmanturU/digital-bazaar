@@ -19,6 +19,7 @@ const $socialMedia3LinkInput = document.getElementById('social-media-3-link')
 const $saveChangesButton = document.querySelector('.save-changes')
 const socialMedia = {} // создаем пустой объект социальных сетей
 
+
 window.addEventListener('DOMContentLoaded', () => {
    checkFormSubmitted()
 })

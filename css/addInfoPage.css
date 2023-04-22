@@ -260,9 +260,6 @@ nav {
 
 /* ------------Save changes------------ */
 .save-changes {
-   /* position: absolute;
-   top: 56vh;
-   right: 80px; */
    margin: 20px 0;
    width: 150px;
    height: 50px;
@@ -277,4 +274,331 @@ nav {
 
 .save-changes:hover {
    background-color: var(--text-red-accent);
+}
+
+
+/* --------------------------===>Create own NFT<===-------------------------- */
+
+
+/* --------------------------===>Title<===-------------------------- */
+.title-main {
+   margin: 100px 0px;
+   /* margin-bottom: 70px; */
+}
+
+.title-main h1 {
+   font-family: var(--ff-spaceMono);
+   font-style: normal;
+   font-weight: 500;
+   font-size: 50px;
+   line-height: 125px;
+
+   text-align: center;
+   text-transform: capitalize;
+
+   color: var(--text-secondary);
+}
+
+.title-main p {
+   font-family: var(--ff-workSans);
+   font-style: normal;
+   font-weight: 300;
+   font-size: 22px;
+   line-height: 30px;
+
+   text-align: center;
+   text-transform: capitalize;
+
+   color: var(--text-secondary);
+}
+
+/* --------------------------===>drop block<===-------------------------- */
+.drag-and-drop-main-form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   /* height: 300px; */
+   margin: 0px 20%;
+   border: 2px dashed #ccc;
+   box-sizing: border-box;
+   border-radius: 20px;
+   padding: 20px;
+   margin-top: 50px;
+   color: var(--text-secondary);
+   text-align: center;
+   background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.drag-and-drop-main-form h2 {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 30px;
+   line-height: 30px;
+   text-transform: capitalize;
+   color: var(--text-secondary);
+   margin-bottom: 15px;
+}
+
+.drag-and-drop-main-form p {
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 19px;
+   text-transform: capitalize;
+   margin-bottom: 20px;
+   color: var(--text-secondary);
+
+}
+
+.drag-and-drop-main-form input {
+   width: 40%;
+   padding: 10px;
+   border: none;
+   background-color: #eee;
+   border-radius: 5px;
+   margin-bottom: 20px;
+   font-size: 16px;
+   color: #333;
+}
+
+.drag-and-drop-main-form img {
+   width: 85px;
+   height: 85px;
+   margin: 30px;
+}
+
+/* --------------------------===>inputs-main-form<===-------------------------- */
+.inputs-main-form {
+   display: flex;
+   justify-content: space-between;
+   margin: 0px 50px;
+   margin-top: 140px;
+}
+
+.left-inputs,
+.right-inputs {
+   display: flex;
+   flex-direction: column;
+   width: 45%;
+}
+
+.input-container {
+   margin-bottom: 20px;
+}
+
+label {
+   display: block;
+   margin-bottom: 10px;
+   color: var(--text-secondary);
+}
+
+input[type="text"],
+input[type="url"],
+input[type="number"] {
+   border: 1px solid var(--text);
+   border-radius: 15px;
+   background-color: var(--backround-secondary);
+   padding: 15px;
+   font-size: 20px;
+   font-weight: 300;
+   line-height: 30px;
+   color: var(--text-secondary);
+   width: 100%;
+   transition: all 0.3s ease;
+}
+
+select {
+   border: 1px solid var(--text);
+   border-radius: 15px;
+   background-color: var(--backround-secondary);
+   padding: 15px;
+   font-size: 20px;
+   font-weight: 300;
+   line-height: 30px;
+   color: var(--text-secondary);
+   width: 100%;
+   transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+select:focus,
+input[type="number"]:focus {
+   outline: none;
+   border-color: var(--text-blue-accent);
+}
+
+.select-wrapper {
+   position: relative;
+}
+
+.blockchain-icon {
+   margin-top: 10px;
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   margin-left: 5px;
+}
+
+
+.right-inputs input[type="text"] {
+   text-transform: capitalize;
+}
+
+/* --------------------------===>Description<===-------------------------- */
+.description-main-form {
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   margin: 0px 50px;
+}
+
+.description-main-form label {
+   font-size: 18px;
+   /* font-weight: bold; */
+   margin-bottom: 10px;
+}
+
+.description-main-form textarea {
+   font-size: 16px;
+   width: 80%;
+   height: 270px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   background: var(--transparent-background);
+}
+
+.save-changes-NFT {
+   margin: 50px 80px;
+   width: 150px;
+   height: 50px;
+   padding: 10px;
+   font-size: 16px;
+   border: none;
+   border-radius: 5px;
+   background-color: var(--text-in-action);
+   color: #fff;
+   cursor: pointer;
+   float: right;
+}
+
+.save-changes-NFT:hover {
+   background-color: var(--text-red-accent);
+}
+
+/* --------------------------===>ddd<===-------------------------- */
+.radio-inputs {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 500px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.radio-inputs>* {
+   margin: 6px;
+}
+
+.radio-input:checked+.radio-tile {
+   border-color: var(--text-blue-accent);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+   color: var(--text-blue-accent);
+}
+
+.radio-input:checked+.radio-tile:before {
+   transform: scale(1);
+   opacity: 1;
+   background-color: var(--text-blue-accent);
+   border-color: var(--text-blue-accent);
+}
+
+.radio-input:checked+.radio-tile .radio-icon svg {
+   fill: var(--text-blue-accent);
+}
+
+.radio-input:checked+.radio-tile .radio-label {
+   border-color: var(--text-blue-accent);
+}
+
+.radio-input:focus+.radio-tile {
+   border-color: var(--text-blue-accent);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px var(--text-blue-accent);
+}
+
+.radio-input:focus+.radio-tile:before {
+   transform: scale(1);
+   opacity: 1;
+}
+
+.radio-tile {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 80px;
+   min-height: 80px;
+   border-radius: 0.5rem;
+   border: 2px solid var(--text-secondary);
+   background-color: var(--backround-secondary);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+   transition: 0.15s ease;
+   cursor: pointer;
+   position: relative;
+}
+
+.radio-tile:before {
+   content: "";
+   position: absolute;
+   display: block;
+   width: 0.75rem;
+   height: 0.75rem;
+   border: 2px solid var(--text-secondary);
+   background-color: var(--backround-secondary);
+   border-radius: 50%;
+   top: 0.25rem;
+   left: 0.25rem;
+   opacity: 0;
+   transform: scale(0);
+   transition: 0.25s ease;
+}
+
+.radio-tile:hover {
+   border-color: var(--text-blue-accent);
+}
+
+.radio-tile:hover:before {
+   transform: scale(1);
+   opacity: 1;
+}
+
+.radio-icon svg {
+   width: 2rem;
+   height: 2rem;
+   fill: var(--text);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.radio-label {
+   color: var(--text);
+   transition: 0.375s ease;
+   text-align: center;
+   font-size: 13px;
+}
+
+.radio-input {
+   clip: rect(0 0 0 0);
+   -webkit-clip-path: inset(100%);
+   clip-path: inset(100%);
+   height: 1px;
+   overflow: hidden;
+   position: absolute;
+   white-space: nowrap;
+   width: 1px;
 }
