@@ -8,7 +8,7 @@
    <title>Create Account</title>
 
    <link rel="stylesheet" href="/css/main.css">
-   <link rel="stylesheet" href="/css/createAccount.css">
+   <link rel="stylesheet" href="/css/create-and-logIn.css">
 </head>
 
 <body>
@@ -32,7 +32,9 @@
          <iframe src="navigation-block.html" width="100%" height="115"></iframe>
       </nav>
    </header>
-
+   <!-- <button class="signOutBtn">
+      <i class="fa fa-sign-out"></i>Sign Out
+   </button> -->
    <main>
       <section class="create-account">
          <div class="left-side">
@@ -43,24 +45,25 @@
                <h1>Create Account</h1>
                <p>Welcome! Enter your details and start creating, collecting and selling NFTs.</p>
             </div>
-            <form>
-               <div class="form-group">
-                  <img src="/img/icons/User-icon.png" alt="Username icon" class="form-img">
-                  <input type="text" name="username" placeholder="Username" required>
-               </div>
+            <form id="signUp-form-Register">
                <div class="form-group">
                   <img src="/img/icons/EnvelopeSimple.png" alt="Email icon" class="form-img">
-                  <input type="email" name="email" placeholder="Email Address" required>
+                  <input type="email" name="email" placeholder="Email Address" class="signUp-email-Input" required>
                </div>
                <div class="form-group">
                   <img src="/img/icons/LockKey.png" alt="Password icon" class="form-img">
-                  <input type="password" name="password" placeholder="Password" required>
+                  <input type="password" name="password" placeholder="Password" class="signUp-password-Input" required>
                </div>
                <div class="form-group">
                   <img src="/img/icons/LockKey.png" alt="Confirm Password icon" class="form-img">
-                  <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+                  <input type="password" name="confirm-password" placeholder="Confirm Password"
+                     class="signUp-confirm-password-Input" required>
                </div>
-               <button class="buttonCreate">Create</button>
+               <button class="submitBtn" id="signUp-Button">Create</button>
+               <p class="auth-info">
+                  <span>Already have an account?</span>
+                  <a href="/log-in.html" class="auth-link">Sign in</a>
+               </p>
             </form>
          </div>
       </section>
@@ -70,7 +73,10 @@
       <iframe src="/footer-block.html" width="100%" height="315"></iframe>
    </footer>
 
+   <script src="/script/signUp.js"></script>
    <script src="/script/main.js"></script>
+   <script src="https://kit.fontawesome.com/56895e0c9b.js" crossorigin="anonymous"></script>
+   <!-- <script src="/script/app.js" type="module"></script> -->
 </body>
 
 </html>

@@ -9,6 +9,7 @@
 
    <link rel="stylesheet" href="/css/main.css">
    <link rel="stylesheet" href="/css/homePage.css">
+   <script src="https://kit.fontawesome.com/56895e0c9b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,9 +34,43 @@
       </nav>
    </header>
 
-   <div class="real"></div>
+   <div class="welcome-header">
+      <div class="left-welcome-block">
+         <div class="left-welcome-block-title">
+            <h1>Discover digital art &amp; Collect NFTs</h1>
+            <p>An NFT marketplace built by a team of three in just 1.5 weeks. Explore and collect art from over 20,000
+               NFT artists, buy and sell with ease</p>
+            <button class="submitBtn"><i class="fa fa-rocket"></i>Get started</button>
+         </div>
+         <ul class="left-welcome-block-sales">
+            <li>
+               <h2>240k+</h2>
+               <p>Total sale</p>
+            </li>
+            <li>
+               <h2>100k+</h2>
+               <p>Auctions</p>
+            </li>
+            <li>
+               <h2>10k+</h2>
+               <p>Artists</p>
+            </li>
+         </ul>
+      </div>
+      <div class="right-welcome-block">
+         <img src="https://cdn.animaapp.com/projects/6357ce7c8a65b2f16659918c/files/heroanimationtransparentbck-2.gif">
+      </div>
+   </div>
 
    <script src="/script/main.js"></script>
+   <script>
+      window.addEventListener('DOMContentLoaded', () => {
+         const localId = localStorage.getItem('localId')
+         if (!localId) {
+            window.open('/createAccount.html', '_self')
+         }
+      })
+   </script>
 </body>
 
 </html>

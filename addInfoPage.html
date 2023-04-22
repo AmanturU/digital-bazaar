@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Additional profile information</title>
+
+   <link rel="stylesheet" href="/css/main.css">
+   <link rel="stylesheet" href="/css/addInfoPage.css">
+   <script src="https://kit.fontawesome.com/56895e0c9b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <!-- --------------------------===>Анимация прогрузки сайта<===-------------------------- -->
+   <div id="preloader" class="preloader">
+      <div class="preloader__loader">
+         <div class="loadingio-spinner-rolling-wfj10wkiga7">
+            <div class="ldio-7b9jp44ngu2">
+               <div></div>
+            </div>
+         </div>
+
+         <span class="preloader__percents">
+            <span id="percents" class="out-num" data-count="100">0</span>%
+         </span>
+      </div>
+   </div>
+
+   <header>
+      <nav>
+         <iframe src="navigation-block.html" width="100%" height="120"></iframe>
+      </nav>
+   </header>
+
+
+
+   <form class="info-block">
+      <div class="profile-picture">
+         <img src="/img/user-bear.png" alt="user-profile-img" class="avatar-img">
+         <p class="avatar-message">At this time, we are unable to accept files, but you can leave a link to your
+            avatar image below.</p>
+         <input type="text" id="avatar-link" name="avatar-link" placeholder="Enter link to avatar image" required>
+      </div>
+      <div class="right-block">
+         <div class="account-details">
+            <div class="username-input">
+               <label for="username-input">Username (how your name will appear to other users on the site):</label>
+               <input type="text" id="username-input" name="username-input" required>
+            </div>
+            <div class="name-inputs">
+               <div class="first-name-input">
+                  <label for="first-name-input">First Name:</label>
+                  <input type="text" id="first-name-input" name="first-name-input" required>
+               </div>
+               <div class="last-name-input">
+                  <label for="last-name-input">Last Name:</label>
+                  <input type="text" id="last-name-input" name="last-name-input" required>
+               </div>
+            </div>
+            <div class="tel-input">
+               <label for="tel-input">Enter your phone number::</label>
+               <input type="tel" id="tel-input" name="tel-input" required>
+            </div>
+            <div class="description-input">
+               <label for="description-input">Description:</label>
+               <textarea id="description-input" name="description-input" rows="5" cols="60" required></textarea>
+            </div>
+
+         </div>
+         <div class="social-media-block">
+            <label for="social-media-count">How many social media profiles would you like to add?</label>
+            <select id="social-media-count" name="social-media-count" onchange="onSocialMediaCountChange()">
+               <option value="0">I don't want to add any social media profiles</option>
+               <option value="1">1 social media profile</option>
+               <option value="2">2 social media profiles</option>
+               <option value="3">3 social media profiles</option>
+            </select>
+            <div class="social-media" id="social-media-1" style="display: none;">
+               <select id="social-media-1-type" name="social-media-1-type">
+                  <option value="website">Website</option>
+                  <option value="twitter">Twitter</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="github">GitHub</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="youtube">YouTube</option>
+               </select>
+               <input type="text" id="social-media-1-link" name="social-media-1-link"
+                  placeholder="Enter link to profile">
+            </div>
+
+            <div class="social-media" id="social-media-2" style="display: none;">
+               <select id="social-media-2-type" name="social-media-2-type">
+                  <option value="website">Website</option>
+                  <option value="twitter">Twitter</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="github">GitHub</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="youtube">YouTube</option>
+               </select>
+               <input type="text" id="social-media-2-link" name="social-media-2-link"
+                  placeholder="Enter link to profile">
+            </div>
+
+            <div class="social-media" id="social-media-3" style="display: none;">
+               <select id="social-media-3-type" name="social-media-3-type">
+                  <option value="website">Website</option>
+                  <option value="twitter">Twitter</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="github">GitHub</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="youtube">YouTube</option>
+               </select>
+               <input type="text" id="social-media-3-link" name="social-media-3-link"
+                  placeholder="Enter link to profile">
+            </div>
+            <div>
+               <button class="save-changes" type="submit">Save Changes</button>
+            </div>
+         </div>
+      </div>
+   </form>
+
+   <script src="/script/main.js"></script>
+   <script src="/script/saveInfoProfile.js"></script>
+</body>
+
+</html>

@@ -7,7 +7,7 @@
    --backround-secondary: #3B3B3B;
    --text: #858584;
    --text-secondary: #FFFFFF;
-   --text-in-action: #A259FF;
+   --text-in-action: #7f1efd;
    --text-blue-accent: #377DF7;
    --text-red-accent: #FF7262;
    --transparent-background: #ffffff00;
@@ -119,14 +119,13 @@ header {
    font-family: var(--ff-workSans);
    background-color: var(--text-in-action);
    font-weight: 600;
+   cursor: pointer;
    font-size: 22px;
 }
 
 .navbar-btn:hover {
-   transition: all 0.1s ease;
-   background-color: var(--transparent-background);
-   border: 2px solid var(--text-in-action);
-   cursor: pointer;
+   transition: all 0.3s ease;
+   background-color: var(--text-red-accent);
 }
 
 @media (max-width: 1585px) {
@@ -187,11 +186,6 @@ header {
       font-size: 15px;
    }
 
-   /* .navbar-btn {
-      border-radius: 20px;
-      padding: 15px 20px;
-      font-size: 17px;
-   } */
 }
 
 
@@ -278,6 +272,7 @@ footer {
    font-family: 'Space Mono';
    text-transform: capitalize;
    text-align: left;
+   color: var(--text-secondary);
 }
 
 .footer-title img {
@@ -287,7 +282,7 @@ footer {
 .footer-text {
    margin-bottom: 15px;
    font-size: 16px;
-   color: #888;
+   color: var(--text);
    width: 290px;
 }
 
@@ -310,13 +305,13 @@ footer {
 }
 
 .footer-nav a {
-   color: #888;
+   color: var(--text);
    font-size: 16px;
    text-decoration: none;
 }
 
 .footer-nav a:hover {
-   color: #000;
+   color: var(--text-secondary);
 }
 
 
@@ -329,7 +324,7 @@ footer {
    flex: 1;
    height: 50px;
    padding: 0 10px;
-   border: 1px solid #ccc;
+   border: 1px solid var(--text);
    border-radius: 20px;
    font-size: 16px;
    width: 450px;
@@ -354,15 +349,12 @@ footer {
 .btn:hover {
    transition: all 0.3s ease;
    background-color: var(--backround);
-   /* border: 2px solid var(--text-in-action); */
-
-   /* height: 52px; */
    padding: 0 38px;
 }
 
 .footer-line {
    border: none;
-   border-top: 1px solid #ccc;
+   border-top: 1px solid var(--text);
    margin-top: 40px;
 
 }
@@ -370,6 +362,6 @@ footer {
 .footer-info {
    margin-top: 20px;
    font-size: 14px;
-   color: #888;
+   color: var(--text);
    text-align: center;
 }
