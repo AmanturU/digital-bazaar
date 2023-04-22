@@ -45,7 +45,7 @@ function outNum(num, elem, options) {
 }
 
 // // ----Проверка на авторизованность
-
+/* --------------------------===>dsdadasdsa<===-------------------------- */
 
 // $signOutBtn.addEventListener('click', () => {
 //    alert('Всё робит')
