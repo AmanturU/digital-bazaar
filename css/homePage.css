@@ -7,7 +7,7 @@
    --backround-secondary: #3B3B3B;
    --text: #858584;
    --text-secondary: #FFFFFF;
-   --text-in-action: #A259FF;
+   --text-in-action: #7f1efd;
    --text-blue-accent: #377DF7;
    --text-red-accent: #FF7262;
    --transparent-background: #ffffff00;
@@ -23,6 +23,7 @@ body {
    overflow-x: hidden;
    font-family: var(--ff-workSans);
    color: var(--text);
+   background: var(--backround);
 }
 
 img {
@@ -31,4 +32,105 @@ img {
 
 a {
    text-decoration: none;
+}
+
+ul {
+   list-style: none;
+}
+
+nav {
+   height: 80px;
+}
+
+/* --------------------------===>Welcome header<===-------------------------- */
+.welcome-header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 40px 95px;
+   font-family: var(--ff-workSans);
+}
+
+.left-welcome-block {
+   flex-basis: 50%;
+   padding: 50px;
+   color: #FFFFFF;
+}
+
+.left-welcome-block-title h1 {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 67px;
+}
+
+.left-welcome-block-title p {
+   font-style: normal;
+   color: var(--text-secondary);
+   font-weight: 400;
+   font-size: 22px;
+   margin-top: 10px;
+   margin-bottom: 30px;
+}
+
+.submitBtn {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 240px;
+   height: 56px;
+   background: var(--text-in-action);
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   font-family: 'Work Sans';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+   color: #FFFFFF;
+}
+
+.submitBtn:hover {
+   transition: all 0.3s ease;
+   background-color: var(--text-red-accent);
+   /* border: 2px solid #FFFFFF; */
+}
+
+.submitBtn i {
+   position: relative;
+   right: 15px;
+}
+
+.left-welcome-block-sales {
+   display: flex;
+   justify-content: left;
+   margin-top: 30px;
+}
+
+.left-welcome-block-sales li {
+   text-align: center;
+   margin-right: 50px;
+}
+
+.left-welcome-block-sales li h2 {
+   font-family: var(--ff-spaceMono);
+   font-style: normal;
+   font-weight: 700;
+   font-size: 28px;
+   margin-bottom: 10px;
+}
+
+.left-welcome-block-sales li p {
+   font-family: var(--ff-workSans);
+   font-style: normal;
+   font-weight: 400;
+   font-size: 23.99px;
+   margin: 0;
+}
+
+.right-welcome-block {
+   flex-basis: 50%;
+   padding: 50px;
+   text-align: center;
 }

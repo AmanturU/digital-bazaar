@@ -58,7 +58,7 @@ a {
    margin: 50px 70px;
 }
 
-.right-side-title {
+.ride-side-content .right-side-title {
    width: 460px;
 }
 
@@ -79,6 +79,10 @@ a {
 
    text-transform: capitalize;
    margin-bottom: 30px;
+}
+
+.right-side-title p {
+   width: 580px;
 }
 
 .form-group {
@@ -108,7 +112,7 @@ a {
    height: 20px;
 }
 
-.buttonCreate {
+.submitBtn {
    justify-content: center;
    align-items: center;
 
@@ -122,9 +126,31 @@ a {
    transition: all 0.3s ease;
 }
 
-.buttonCreate:hover {
+.submitBtn:hover {
    transition: all 0.1s ease;
    background-color: var(--transparent-background);
    border: 2px solid var(--text-in-action);
    cursor: pointer;
+}
+
+.auth-info {
+   /* font-size: 50px; */
+   margin: 20px 0;
+   text-align: left;
+}
+
+.auth-info span {
+   font-size: 16px;
+}
+
+
+.auth-link {
+   font-size: 16px;
+   color: #0077c0;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.auth-link:hover {
+   text-decoration: underline;
 }
