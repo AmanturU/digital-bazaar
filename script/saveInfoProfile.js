@@ -61,6 +61,7 @@ $formInfoSubmit.addEventListener('submit', (event) => {
    if ($usernameInput.validity.valid && $firstNameInput.validity.valid && $lastNameInput.validity.valid && $telInput.validity.valid && $descriptionInput.validity.valid && $socialMediaCountSelect.value > 0) {
       createProfile({
          userName: $usernameInput.value,
+         userAvatarLink: $avatarLinkInput.value,
          personalInfo: {
             firstName: $firstNameInput.value,
             lastName: $lastNameInput.value,
@@ -74,9 +75,10 @@ $formInfoSubmit.addEventListener('submit', (event) => {
 })
 
 /* --------------------------===>Отправка информации о профиле в FireBase<===-------------------------- */
-async function createProfile({ userName, personalInfo: { firstName, lastName, description, telephone }, socialMedia }) {
+async function createProfile({ userName, userAvatarLink, personalInfo: { firstName, lastName, description, telephone }, socialMedia }) {
    const profile = {
       userName,
+      userAvatarLink,
       personalInfo: {
          firstName,
          lastName,
@@ -103,6 +105,7 @@ async function createProfile({ userName, personalInfo: { firstName, lastName, de
       console.error(e)
    }
 }
+
 
 
 /* --------------------------===>Фунция для получания uid<===-------------------------- */

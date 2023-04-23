@@ -1,5 +1,10 @@
+// const API_KEY = 'AIzaSyBOMG-k0X65yHLtDcl2E8rYzj6oCZKAhug'
+// const SIGN_IN_URL = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`
+// const BASE_URL = 'https://digital-bazaar-01-default-rtdb.asia-southeast1.firebasedatabase.app/'
+
 $preloader = document.querySelector('#preloader')
 $percents = document.querySelector('#percents')
+$btnOrProfileDiv = document.querySelector('.btn-or-profile-Div')
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -27,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
    }
 
 })
+
 function outNum(num, elem, options) {
    const { step, time } = options
 
@@ -44,7 +50,19 @@ function outNum(num, elem, options) {
    }, t)
 }
 
-// // ----Проверка на авторизованность
+
+
+
+
+
+
+function redirectIfLoggedIn() {
+   const localId = localStorage.getItem('localId')
+   if (localId) {
+
+   }
+}
+
 /* --------------------------===>dsdadasdsa<===-------------------------- */
 
 // $signOutBtn.addEventListener('click', () => {
