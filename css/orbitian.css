@@ -368,6 +368,14 @@ body {
       transform: scale(1);
     }
   }
+
+  .imgofnfts {
+    width: 330px;
+    height: 295px;
+
+    background: url(Keemun_fox_in_a_wardrobe_wearing_sunglasses_colorful_4k_artstat_f58642e8-2784-46e2-8ecd-c34701427dd9);
+    border-radius: 20px 20px 0px 0px;
+  }
   
   
   
