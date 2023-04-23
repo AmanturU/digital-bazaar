@@ -197,15 +197,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 30px 25px;
+    padding: 20px 1px 25px;
     gap: 25px;
     width: 330px;
     height: 173px;
 }
 
+.browse-card-bottom h2 {
+    margin-left: 10px;
+}
+
+.browse-card-bottom img {
+    margin-left: 10px;
+}
+
 .browse-card-bottom-bottom {
     display: flex;
-    gap: 150px;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
 }
 
 .browse-card-bottom img {
@@ -219,6 +230,7 @@ body {
     font-family: 'Space Mono';
     margin-top: 6px;
     font-size: 16px;
+
 }
 
 .browse-card-bottom-bottom span {

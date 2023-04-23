@@ -1,59 +1,61 @@
-// const $container = document.querySelector('.browse-container')
-// const $currentPage = document.querySelector('.counter')
-// const $prevPage = document.querySelector('.btn-prev')
-// const $nextPage = document.querySelector('.btn-next')
-// const $browseCards = Array.from(document.getElementsByClassName('browse-card'));
+const itemsPerPage = 6;
+const container = document.querySelector('.browse-contant');
+const cards = container.querySelectorAll('.browse-card');
+const numPages = Math.ceil(cards.length / itemsPerPage);
 
-// const LIMIT = 6
-// let offset = 0
-// let page = 1
+let currentPage = 1;
 
-// function addBrowseCard(country) {
-//     $container.innerHTML += titleCountryCard(country);
-// }
+function displayCards(pageNum, container) {
+  const startIndex = (pageNum - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  container.innerHTML = '';
+  for (let i = startIndex; i < endIndex && i < cards.length; i++) {
+    container.appendChild(cards[i].cloneNode(true));
+  }
 
-// async function getAllCountries(offset) {
-//     try {
-//         $currentPage.innerHTML = page;
+  if (currentPage === 1) {
+    prevBtn.disabled = true;
+  } else {
+    prevBtn.disabled = false;
+  }
 
-//         const slicedCountries = $browseCards.slice(offset, offset + LIMIT);
+  if (currentPage === numPages) {
+    nextBtn.disabled = true;
+  } else {
+    nextBtn.disabled = false;
+  }
+}
 
-//         const temp = slicedCountries.reduce((acc, country) => acc + titleCountryCard(country), '');
+const counter = document.querySelector('.counter');
+const prevBtn = document.querySelector('.btn-prev');
+const nextBtn = document.querySelector('.btn-next');
+prevBtn.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--;
+    displayCards(currentPage, container);
+    counter.textContent = currentPage;
+  }
+});
+nextBtn.addEventListener('click', () => {
+  if (currentPage < numPages) {
+    currentPage++;
+    displayCards(currentPage, container);
+    counter.textContent = currentPage;
+  }
+});
 
-//         $container.innerHTML = temp;
+displayCards(currentPage, container);
+counter.textContent = currentPage;
 
-//         // Добавление browse-card в контейнер
-//         slicedCountries.forEach(country => addBrowseCard(country));
+if (currentPage === 1) {
+  prevBtn.disabled = true;
+} else {
+  prevBtn.disabled = false;
+}
 
-//         // Проверка на первую страницу
-//         if (page === 1) {
-//             $prevPage.disabled = true;
-//         } else {
-//             $prevPage.disabled = false;
-//         }
-//         // Проверка на последнюю страницу
-//         if (offset + LIMIT >= $browseCards.length) {
-//             $nextPage.disabled = true;
-//         } else {
-//             $nextPage.disabled = false;
-//         }
-//     } catch (e) {
-//         console.error(e);
-//     }
-// }
-
-// $prevPage.addEventListener('click', () => {
-//     getAllCountries(offset -= LIMIT)
-//     page--
-//  })
- 
-//  $nextpage.addEventListener('click', () => {
-//     getAllCountries(offset += LIMIT)
-//     page++
-//  })
- 
-//  window.addEventListener('DOMContentLoaded', () => {
-//     getAllCountries(offset)
-//  })
-
+if (currentPage === numPages) {
+  nextBtn.disabled = true;
+} else {
+  nextBtn.disabled = false;
+}
 
