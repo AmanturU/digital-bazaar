@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --ff-spaceMono: 'Space Mono';
+    --ff-workSans: 'Work Sans';
+    --backround: #2B2B2B;
+    --backround-secondary: #3B3B3B;
+    --text: #858584;
+    --text-secondary: #FFFFFF;
+    --text-in-action: #7f1efd;
+    --text-blue-accent: #377DF7;
+    --text-red-accent: #FF7262;
+    --transparent-background: #ffffff00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     width: 100%;
-    margin: 0;
+    overflow-x: hidden;
+    font-family: var(--ff-workSans);
+    color: var(--text);
+    background: var(--backround);
 }
 
 .navbar {
@@ -18,7 +39,7 @@ body {
 .description {
     display: flex;
     justify-content: jus;
-    
+
     padding: 40px 100px;
     gap: 30px;
     color: white;
@@ -46,6 +67,7 @@ body {
 .Option img {
     width: 35px;
 }
+
 .btns {
     margin: 0;
     display: flex;
@@ -138,7 +160,8 @@ body {
 .browse-container {
     background-color: #2B2B2B;
     border-bottom: 1px solid #2B2B2B;
-    border-top:  1px solid #3b3b3b;
+    border-top: 1px solid #3b3b3b;
+    margin: 0 40px;
 }
 
 .browse-contant {
@@ -187,7 +210,7 @@ body {
 
 .browse-card-bottom img {
     width: 25px;
-    padding: 5px 6px 0 0 ;
+    padding: 5px 6px 0 0;
     position: relative;
     top: 6px;
 }
@@ -224,16 +247,17 @@ body {
     border: 1px solid #4b4b4b;
     cursor: pointer;
     height: 60px;
-  }
+}
 
-  /* ============================ Тимер =================== */
+/* ============================ Тимер =================== */
 
-  .timer {
+.timer {
     width: 50%;
     display: flex;
     justify-content: center;
-  }
-  .timer-inside {
+}
+
+.timer-inside {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -271,39 +295,41 @@ body {
     font-family: 'Space Mono';
     text-align: center;
     padding-left: 30px;
-} 
+}
 
 .times {
     margin: 0 8px 0 5px;
     position: relative;
     bottom: 25px;
 }
-  
-  @keyframes neon-glow {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-      background: linear-gradient(45deg, #a29da9, #6607e9);
-    }
-    50% {
-      transform: scale(1.09);
-      opacity: 0.5;
-      background: linear-gradient(45deg, #a29da9, #6607e9);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-      background: linear-gradient(45deg, #a29da9, #6607e9);
-    }
-  }
-  
-  .neon-button:hover {
-    animation: neon-glow 1s infinite;
-  }
 
-  /* ================= MODAL ----------------------- */
-  
-  .modal {
+@keyframes neon-glow {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        background: linear-gradient(45deg, #a29da9, #6607e9);
+    }
+
+    50% {
+        transform: scale(1.09);
+        opacity: 0.5;
+        background: linear-gradient(45deg, #a29da9, #6607e9);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        background: linear-gradient(45deg, #a29da9, #6607e9);
+    }
+}
+
+.neon-button:hover {
+    animation: neon-glow 1s infinite;
+}
+
+/* ================= MODAL ----------------------- */
+
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -313,9 +339,9 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, .5);
-  }
-  
-  .modal-container {
+}
+
+.modal-container {
     background-color: #efefef;
     margin: 15% auto;
     padding: 20px;
@@ -323,45 +349,38 @@ body {
     width: 30%;
     animation-name: openModal;
     animation-duration: .5s;
-  }
-  
-  .modal-container h1 {
+}
+
+.modal-container h1 {
     margin-top: 0;
     font-size: 1.5rem;
     text-align: center;
-  }
-  
-  .close-btn-container {
+}
+
+.close-btn-container {
     width: 100%;
     text-align: right;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     width: 20px;
     height: 20px;
     cursor: pointer;
     transition: .3s;
-  }
-  
-  .close-btn:hover {
+}
+
+.close-btn:hover {
     opacity: 0.5;
-  }
-  
-  @keyframes openModal {
+}
+
+@keyframes openModal {
     from {
-      opacity: 0;
-      transform: scale(.5);
+        opacity: 0;
+        transform: scale(.5);
     }
-  
+
     to {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
-  }
-  
-  
-  
-  
-
-
-
+}

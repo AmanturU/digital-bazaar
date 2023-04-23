@@ -318,6 +318,7 @@ footer {
 .form-group {
    display: flex;
    align-items: center;
+   width: 650px;
 }
 
 .form-control {
