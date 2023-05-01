@@ -505,29 +505,29 @@ input[type="number"]:focus {
 }
 
 .radio-input:checked+.radio-tile {
-   border-color: var(--text-blue-accent);
+   border-color: var(--text-in-action);
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-   color: var(--text-blue-accent);
+   color: var(--text-in-action);
 }
 
 .radio-input:checked+.radio-tile:before {
    transform: scale(1);
    opacity: 1;
-   background-color: var(--text-blue-accent);
-   border-color: var(--text-blue-accent);
+   background-color: var(--text-in-action);
+   border-color: var(--text-in-action);
 }
 
 .radio-input:checked+.radio-tile .radio-icon svg {
-   fill: var(--text-blue-accent);
+   fill: var(--text-in-action);
 }
 
 .radio-input:checked+.radio-tile .radio-label {
-   border-color: var(--text-blue-accent);
+   border-color: var(--text-in-action);
 }
 
 .radio-input:focus+.radio-tile {
    border-color: var(--text-blue-accent);
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px var(--text-blue-accent);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px var(--text-in-action);
 }
 
 .radio-input:focus+.radio-tile:before {
@@ -592,6 +592,11 @@ input[type="number"]:focus {
    font-size: 13px;
 }
 
+input[type="radio"]:checked+.radio-tile .radio-label {
+   color: var(--text-secondary);
+   text-shadow: 0 0 6px white, 0 0 9px white;
+}
+
 .radio-input {
    clip: rect(0 0 0 0);
    -webkit-clip-path: inset(100%);
@@ -601,4 +606,26 @@ input[type="number"]:focus {
    position: absolute;
    white-space: nowrap;
    width: 1px;
+}
+
+input[type="datetime-local"] {
+   background-color: var(--text-in-action);
+   padding: 15px;
+   /* position: absolute; */
+   /* transform: translate(-50%, -50%); */
+   /* top: 50%; */
+   /* left: 50%; */
+   font-family: "Roboto Mono", monospace;
+   color: #ffffff;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+   background-color: #ffffff;
+   padding: 5px;
+   cursor: pointer;
+   border-radius: 3px;
 }

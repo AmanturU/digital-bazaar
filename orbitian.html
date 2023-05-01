@@ -9,6 +9,8 @@
    <link rel="stylesheet" href="/css/main.css">
 
    <link rel="stylesheet" href="/css/orbitian.css">
+   <!-- <link rel="stylesheet" href="/css/browse.css"> -->
+   <script src="https://kit.fontawesome.com/56895e0c9b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,27 +32,66 @@
       <nav class="navbar">
          <iframe src="navigation-block.html" width="100%" height="115"></iframe>
       </nav>
-      <div class="main-img"></div>
+      <!-- <div class="main-img"></div> -->
    </header>
 
    <div class="description">
-      <div class="leftContent">
-         <h2>The Orbitians</h2>
-         <p class="smallScription">Minted on Apr 15, 2023</p>
+      <div class="card-block">
+         <div class="inside-card-block">
+            <div class="img-inside-card-block">
+               <img id="img-nft-card" src="/img/user-bear.png" alt="img">
+            </div>
+            <div class="detail-info-block">
+               <p class="small-scription">Details</p>
+               <!-- <div class="small-scription-option">
+                  <img src="/orbitianImg//Globe.png" alt="picture">
+                  <span>View on Etherscan</span>
+               </div> -->
+
+               <a class="small-scription-option" id="original-link">
+                  <img src="/orbitianImg//Globe.png" alt="picture">
+                  <span>View Original</span>
+               </a>
+
+               <p class="small-scription">Tags</p>
+               <div class="tags-buttons">
+                  <a href="#" style="--clr:#ff1867" class="tag-button">
+                     <span>animation</span>
+                     <i></i>
+                  </a>
+                  <a href="#" style="--clr:#6eff3e" class="tag-button">
+                     <span>illustration</span>
+                     <i></i>
+                  </a>
+                  <a href="#" style="--clr:#1e9bff" class="tag-button">
+                     <span>moon</span>
+                     <i></i>
+                  </a>
+                  <a href="#" style="--clr:#9970c2" class="tag-button">
+                     <span>moon</span>
+                     <i></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="right-content-block">
+         <h2 class="title-card-rcb" id="title-nft-card">The Orbitians</h2>
+         <p class="little-title-card-rcb">Minted on <span id="created-time-nft-card">Apr 15, 2023</span></p>
          <br>
-         <p class="smallScription">Created By</p>
-         <div class="Option">
-            <img src="/orbitianImg/Asset 12 2.png" alt="picture">
-            <strong>Option</strong>
+         <p class="little-title-rcb">Created By</p>
+         <div class="Option" id="createdBy-profile-nft-card">
+            <img src="/orbitianImg/Asset 12 2.png" alt="picture" id="profile-img-nft-card">
+            <strong id="profile-username-nft-card">Option</strong>
          </div>
          <br>
-         <p class="smallScription">Description</p>
+         <p class="little-title-rcb">Description</p>
          <br>
-         <p>
-            The Orbitians <br>
-            is a collection of 10,000 unique NFTs on the Ethereum blockchain, <br><br> There are all sorts of beings in
-            the NFT Universe. The most advanced and friendly of the bunch are Orbitians. <br><br> They live in a metal
-            space machines, high up in the sky and only have one foot on Earth. <br>
+         <p id="description-nft-card">
+            The Orbitians
+            is a collection of 10,000 unique NFTs on the Ethereum blockchain. There are all sorts of beings in
+            the NFT Universe. The most advanced and friendly of the bunch are Orbitians. They live in a metal
+            space machines, high up in the sky and only have one foot on Earth.
             These Orbitians are a peaceful race, but they have been at war with a group of invaders for many
             generations. The invaders are called Upside-Downs, because of their inverted bodies that live on the ground,
             yet do not know any other way to be. Upside-Downs believe that they will be able to win this war if they
@@ -58,260 +99,48 @@
          </p>
 
          <br>
-         <p class="smallScription">Details</p>
-         <div class="Option">
-            <img src="/orbitianImg//Globe.png" alt="picture">
-            <span>View on Etherscan</span>
-         </div>
+         <div class="info-timerBlock" id="auction-block-nft-card" style="display: none;">
+            <p>Auction ends in:</p>
+            <div>
+               <div class="top-timer">
+                  <span id="hours" data-time="hours">00 </span>:
+                  <span id="minutes" data-time="minutes">00 </span>:
+                  <span id="seconds" data-time="seconds">00 </span>
 
-         <div class="Option">
-            <img src="/orbitianImg//Globe.png" alt="picture">
-            <span>View Original</span>
+               </div>
+               <div class="H-M-S">
+                  <span class="times" data-unit="hours">hours</span>
+                  <span class="times" data-unit="minutes">minutes</span>
+                  <span class="times" data-unit="seconds">seconds</span>
+               </div>
+            </div>
+            <div>
+               <h3 class="current-price">Current price: <span id="price-nft-card">$1000</span> </h3>
+               <button class="timer-button">Place Bid</button>
+            </div>
          </div>
-
-         <br>
-         <p class="smallScription">Tags</p>
-         <br>
-         <div class="btns">
-            <a href="#" style="--clr:#ff1867" class="button">
-               <span>animation</span>
-               <i></i>
-            </a>
-            <a href="#" style="--clr:#6eff3e" class="button">
-               <span>illustration</span>
-               <i></i>
-            </a>
-            <a href="#" style="--clr:#1e9bff" class="button">
-               <span>moon</span>
-               <i></i>
-            </a>
-            <a href="#" style="--clr:#9970c2" class="button">
-               <span>moon</span>
-               <i></i>
-            </a>
+         <div class="final-price-block" id="final-price-block-nft-card" style="display: none;">
+            <p>Price per NFT</p>
+            <h2 class="price-amount" id="price-per-NFT-card"> <span>~6.38 ETH</span> ($1,500.99)</h2>
+            <button class="timer-button">Buy now</button>
          </div>
          <br>
          <br>
          <br>
          <div class="More-Information">
             <h1>More From This Artist</h1>
-            <button class="neon-button">
+            <button class="neon-button" onclick="parent.location.href='/artistPage.html'">
                <span>&#8594</span> Go To Artsit Page
             </button>
          </div>
       </div>
 
-      <div class="timer">
-         <div class="timer-inside">
-            <p>Auction ends in:</p>
-            <div class="top-timer">
-               <span id="hours">00 </span> :
-               <span id="minutes">00 </span> :
-               <span id="seconds">00 </span>
-            </div>
-            <div class="H-M-S">
-               <span class="times">hours</span>
-               <span class="times">minutes</span>
-               <span class="times">seconds</span>
-            </div>
-            <button class="timer-button">Place Bid</button>
-         </div>
-      </div>
    </div>
 
    <div class="browse-container">
-      <div class="browse-contant">
-         <div class="browse-card">
-            <div>
-               <img src="/orbitianImg/Image PlaceHolder (13).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Foxy Life</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/orbitianImg/Image Placeholder (12).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Cat From Future</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/orbitianImg/Image Placeholder (14).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Psycho Dog</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/orbitianImg/Image Placeholder (15).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Designer Bear</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/orbitianImg/Image Placeholder (16).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Dancing Robot 0345</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/orbitianImg/Image Placeholder (17).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Dancing Robot 0132</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/orbitianImg/Image Placeholder (18).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Dancing Robot 0432</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/NFTimgs/Image Placeholder (8).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Traveled Zombie</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="picture"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="browse-card">
-            <div>
-               <img src="/NFTimgs/Image Placeholder (4).png" alt="picture">
-            </div>
-            <div class="browse-card-bottom">
-               <div class="browse-card-img">
-                  <h2>Unbelievable Dog</h2>
-                  <img src="/orbitianImg/Asset 12 2.png" alt="Price"> <span>Shroomie</span>
-               </div>
-               <div class="browse-card-bottom-bottom">
-                  <div>
-                     <span>Price</span>
-                     <p>1.83 $</p>
-                  </div>
-                  <div>
-                     <span>highest Bid</span>
-                     <p>1.22 $</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <div class="browse">
 
+      </div>
       <div class="btn-content">
          <button class="btn-prev">back</button>
          <span class="counter">1</span>
@@ -321,13 +150,13 @@
 
 
    <!-- ============== MODAL =========== -->
-   <div class="modal" id="modal">
+   <!-- <div class="modal" id="modal">
       <div class="modal-container">
          <div class="close-btn-container">
             <img src="/x-mark.png" alt="Close btn" class="close-btn">
          </div>
       </div>
-   </div>
+   </div> -->
 
    <footer>
       <iframe src="/footer-block.html" width="100%" height="315"></iframe>
@@ -335,8 +164,7 @@
 
    <script src="/script/main.js"></script>
    <script src="/script/browse.js"></script>
-   <script src="/script/timer.js"></script>
-   <script src="/script/obritian.js"></script>
+   <script src="/script/orbitian.js"></script>
 </body>
 
 </html>

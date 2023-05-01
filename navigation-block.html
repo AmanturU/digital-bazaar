@@ -15,15 +15,16 @@
       <nav class="navbar">
          <div class="navbar-logo">
             <a href="#"><img src="/img/icons/Store-icon.png" alt="Digital Bazaar Logo"></a>
-            <h1 class="navbar-brand">Digital Bazaar</h1>
+            <a onclick="parent.location.href='/homePage.html'" class="navbar-brand">Digital Bazaar</a>
          </div>
          <div class="navbar-main">
             <ul class="navbar-menu">
-               <li class="navbar-item"><a href="#">Marketplace</a></li>
-               <li class="navbar-item"><a href="#">Rankings</a></li>
+               <li class="navbar-item" onclick="parent.location.href='/Browse-marketplase.html'"><a
+                     href="#">Marketplace</a></li>
+               <li class="navbar-item" onclick="parent.location.href='/topcreators.html'"><a href="#">Rankings</a></li>
                <li class="navbar-item"><a href="#">Connect a Wallet</a></li>
             </ul>
-            <div class="btn-or-profile-Div"><a class="navbar-btn">
+            <div class="btn-or-profile-Div"><a class="navbar-btn" onclick="parent.location.href='/createAccount.html'">
                   <img src="/img/icons/User-icon.png" alt="Sign Up Icon">Sign Up</a></div>
          </div>
       </nav>

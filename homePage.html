@@ -9,6 +9,7 @@
 
    <link rel="stylesheet" href="/css/main.css">
    <link rel="stylesheet" href="/css/homePage.css">
+   <link rel="stylesheet" href="/css/browse.css">
    <script src="https://kit.fontawesome.com/56895e0c9b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -40,7 +41,7 @@
             <h1>Discover digital art &amp; Collect NFTs</h1>
             <p>An NFT marketplace built by a team of three in just 1.5 weeks. Explore and collect art from over 20,000
                NFT artists, buy and sell with ease</p>
-            <button class="submitBtn" onclick="parent.location.href='/addInfoPage.html'">`><i
+            <button class="submitBtn" onclick="parent.location.href='/createOwnNFTpage.html'"><i
                   class="fa fa-rocket"></i>Get started</button>
          </div>
          <ul class="left-welcome-block-sales">
@@ -63,7 +64,92 @@
       </div>
    </div>
 
+
+   <!-- --------------------------===>How it Works<===-------------------------- -->
+   <div class="discover-more-Nfts">
+      <div class="title-discover-more-Nfts">
+         <div class="left-title-discover-more-Nfts">
+            <h1>How it works</h1>
+            <p>Find out how to get started</p>
+         </div>
+         <div class="right-title-discover-more-Nfts">
+            <button onclick="parent.location.href='/Browse-marketplase.html'"><i
+                  class="fa-solid fa-address-card"></i></i>
+               Add info about yourself</button>
+         </div>
+      </div>
+
+   </div>
+   <div class="info-card-container">
+      <div class="card" onclick="parent.location.href='/addInfoPage.html'">
+         <img src="/img/icons/wallet.png">
+         <h2>Add profile information</h2>
+         <p>If you would like to create your own NFT, please complete the additional account information by clicking on
+            this card.</p>
+      </div>
+      <div class="card" onclick="parent.location.href='/createOwnNFTpage.html'">
+         <img src="/img/icons/folder.png">
+         <h2>Create Your NFT</h2>
+         <p>Upload your artwork and create your own NFT. Include a description, social links, and set a floor price.</p>
+      </div>
+
+      <div class="card" onclick="parent.location.href='/Browse-marketplase.html'">
+         <img src="/img/icons/korzina.png">
+         <h2>Discover Unique NFTs from Users</h2>
+         <p>Browse auctions and fixed-price listings to expand your collection or make trades for the items you want.
+         </p>
+      </div>
+   </div>
+
+   <!-- --------------------------===>Discover-more<===-------------------------- -->
+   <div class="discover-more-Nfts">
+      <div class="title-discover-more-Nfts">
+         <div class="left-title-discover-more-Nfts">
+            <h1>Discover More NFTs</h1>
+            <p>Explore New Trending NFTS</p>
+         </div>
+         <div class="right-title-discover-more-Nfts">
+            <button onclick="parent.location.href='/Browse-marketplase.html'"><i class="fa-solid fa-eye fa-fade"></i>
+               See All</button>
+         </div>
+      </div>
+
+   </div>
+   <div class="top-container">
+      <div class="top3-card-container"></div>
+   </div>
+
+   <!-- --------------------------===>Top creators block<===-------------------------- -->
+   <div class="discover-more-Nfts">
+      <div class="title-discover-more-Nfts">
+         <div class="left-title-discover-more-Nfts">
+            <h1>Top Creators</h1>
+            <p>Checkout Top Rated Creators On The NFT Marketplace</p>
+         </div>
+         <div class="right-title-discover-more-Nfts">
+            <button onclick="parent.location.href='/topcreators.html'"><i class="fa fa-rocket"></i>
+               Go to full list</button>
+         </div>
+      </div>
+
+   </div>
+   <div class="top-creators-block">
+      <div class="top-creators-card-block">
+         <h1 class="top-creators-num">1</h1>
+         <img class="top-creators-img" src="/NFTimgs/Image Placeholder (1).png" alt="Profile Image">
+         <div>
+            <h2 class="top-creators-username">Username</h2>
+            <p class="top-creators-sales">Total Sales: <span>34.45 ETN</span></p>
+         </div>
+      </div>
+   </div>
+
+   <footer>
+      <iframe src="/footer-block.html" width="100%" height="315"></iframe>
+   </footer>
+
    <script src="/script/main.js"></script>
+   <script src="/script/homePage.js"></script>
    <script>
       window.addEventListener('DOMContentLoaded', () => {
          const localId = localStorage.getItem('localId')

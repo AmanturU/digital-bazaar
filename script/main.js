@@ -1,42 +1,27 @@
-// const API_KEY = 'AIzaSyBOMG-k0X65yHLtDcl2E8rYzj6oCZKAhug'
-// const SIGN_IN_URL = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`
-// const BASE_URL = 'https://digital-bazaar-01-default-rtdb.asia-southeast1.firebasedatabase.app/'
+const logoutBtn = document.querySelector('#logout-btn')
 
-$preloader = document.querySelector('#preloader')
-$percents = document.querySelector('#percents')
-$btnOrProfileDiv = document.querySelector('.btn-or-profile-Div')
+const preloader = document.querySelector('#preloader')
+const percents = document.querySelector('#percents')
+const btnOrProfileDiv = document.querySelector('.btn-or-profile-Div')
 
 document.addEventListener('DOMContentLoaded', () => {
-
-   const mediaFiles = document.querySelectorAll('img, video');
    let i = 0
 
-   if (!mediaFiles) {
-      Array.from(mediaFiles).forEach((file, index) => {
-         file.onload = () => {
-            i++
+   outNum(100, percents, {
+      step: 1,
+      time: 380 + Math.random() * 3800
+   })
 
-            outNum(((i * 100) / mediaFiles.length).toFixed(1), $percents, {
-               step: 1,
-               time: 1000
-            })
-
-            if (i === mediaFiles.length) {
-               $preloader.classList.add('preloader--hide')
-               $percents.innerHTML = 100
-            }
-         }
-      })
-   } else {
-      $preloader.classList.add('preloader--hide')
-   }
-
+   setTimeout(() => {
+      preloader.classList.add('preloader--hide')
+      percents.innerHTML = 100
+   }, 4000)
 })
 
 function outNum(num, elem, options) {
    const { step, time } = options
 
-   let n = parseInt(elem.innerHTML)
+   let n = 0
    let t = Math.round(time / (num / step))
 
    let interval = setInterval(() => {
@@ -51,22 +36,15 @@ function outNum(num, elem, options) {
 }
 
 
-
-
-
-
-
-function redirectIfLoggedIn() {
-   const localId = localStorage.getItem('localId')
-   if (localId) {
-
-   }
+if (localStorage.getItem('localId')) {
+   logoutBtn.style.display = 'block';
+} else {
+   logoutBtn.style.display = 'none';
 }
+
+
+
+
 
 /* --------------------------===>dsdadasdsa<===-------------------------- */
 
-// $signOutBtn.addEventListener('click', () => {
-//    alert('Всё робит')
-//    localStorage.removeItem('localId')
-//    window.open('../html/signIn.html', '_self')
-// })

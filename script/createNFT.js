@@ -14,6 +14,7 @@ const $saveChangesBtn = document.getElementsByClassName('save-changes-NFT')
 const $nftPriceInput = document.querySelector('.nft-price-input')
 const $fixedPriceRadioInput = document.querySelector('#fixed-price-radio-input')
 const $auctionRadioInput = document.querySelector('#auction-radio-Input')
+const $auctionEndDateInput = document.getElementById("auction-end-date")
 /* --------------------------===>Проверка на авторизованность<===-------------------------- */
 window.addEventListener('DOMContentLoaded', () => {
    const localId = localStorage.getItem('localId')
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
 /* --------------------------===>Подготовка инфы для отправки<===-------------------------- */
 $formCreateNFT.addEventListener('submit', (event) => {
    event.preventDefault()
+   const auctionEndDateInf = new Date($auctionEndDateInput.value).getTime()
    const priceType = $fixedPriceRadioInput.checked ? "FixedPrice" : $auctionRadioInput.checked ? "Auction" : "Not selected";
    if ($itemNameInput.validity.valid && $collectionInput.validity.valid && $blockchainSelect.validity.valid && $externalLinkInput.validity.valid && $supplyInput.validity.valid && $itemDescriptionInput.validity.valid) {
       createNFT({
@@ -32,6 +34,7 @@ $formCreateNFT.addEventListener('submit', (event) => {
          itemName: $itemNameInput.value,
          itemDescription: $itemDescriptionInput.value,
          collection: $collectionInput.value,
+         auctionEndDate: auctionEndDateInf,
          addInfo: {
             externalLink: $externalLinkInput.value,
             supply: $supplyInput.value,
@@ -44,21 +47,23 @@ $formCreateNFT.addEventListener('submit', (event) => {
 })
 
 /* --------------------------===>Отправка nft в FireBase<===-------------------------- */
-async function createNFT({ nftImage, itemName, itemDescription, collection, addInfo: { externalLink, supply, blockchain, price, priceType } }) {
+async function createNFT({ nftImage, itemName, itemDescription, collection, auctionEndDate, addInfo: { externalLink, supply, blockchain, price, priceType } }) {
    const uid = getUID()
    const nftData = {
       nftImage,
       itemName,
       itemDescription,
       collection,
+      auctionEndDate,
       addInfo: {
          externalLink,
          supply,
          blockchain,
          price,
-         priceType
-      }
-   }
+         priceType,
+      },
+      createdAt: createTimestamp(),
+   };
 
    const nftDataForGlobal = {
       creatorId: uid,
@@ -66,13 +71,15 @@ async function createNFT({ nftImage, itemName, itemDescription, collection, addI
       itemName,
       itemDescription,
       collection,
+      auctionEndDate,
       addInfo: {
          externalLink,
          supply,
          blockchain,
          price,
-         priceType
-      }
+         priceType,
+      },
+      createdAt: createTimestamp(),
    }
    try {
 
@@ -104,4 +111,10 @@ async function createNFT({ nftImage, itemName, itemDescription, collection, addI
 /* --------------------------===>Фунция для получания uid<===-------------------------- */
 function getUID() {
    return localStorage.getItem('localId')
+}
+
+/* --------------------------===>Функция для получения даты создания<===-------------------------- */
+function createTimestamp() {
+   const timestamp = new Date().getTime()
+   return timestamp
 }

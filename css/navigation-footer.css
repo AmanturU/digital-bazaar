@@ -65,12 +65,14 @@ header {
    letter-spacing: -1px;
    margin-left: 0.5rem;
    font-family: 'Space Mono';
+   transition: all 0.2s ease-in-out;
    text-transform: capitalize;
 }
 
 .navbar-brand:hover {
    transition: all 0.2s ease-in-out;
    color: var(--text-in-action);
+   transform: translateY(-2px);
    cursor: pointer;
 }
 
@@ -96,10 +98,12 @@ header {
    font-size: 22px;
    color: var(--text-secondary);
    transition: all 0.2s ease-in-out;
+
 }
 
 .navbar-item a:hover {
    color: #A259FF;
+   transform: translateY(-4px);
 }
 
 
@@ -426,4 +430,50 @@ footer {
    font-size: 14px;
    color: var(--text);
    text-align: center;
+}
+
+
+
+#logout-btn {
+   position: fixed;
+   bottom: 30px;
+   right: 90px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: var(--ff-workSans);
+   font-size: 1.1rem;
+   color: var(--backround);
+   background-color: var(--text-red-accent);
+   border: none;
+   border-radius: 5px;
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+}
+
+#logout-btn:hover {
+   background-color: var(--text-in-action);
+   color: var(--text-secondary);
+}
+
+#logout-btn:hover svg path {
+   fill: var(--text-secondary);
+}
+
+#logout-btn:hover svg rect {
+   transform: translateX(100%);
+}
+
+#logout-btn svg {
+   width: 16px;
+   height: 16px;
+   margin-right: 0.5rem;
+   fill: var(--text-in-action);
+   transition: all 0.3s ease-in-out;
+}
+
+#logout-btn svg rect {
+   fill: var(--transparent-background);
+   transition: all 0.3s ease-in-out;
 }
